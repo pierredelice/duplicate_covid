@@ -11,7 +11,7 @@ street_stopword = [
 ]
 
 
-class tweak:
+class Tweak:
     """
     Class documentation
     """
@@ -120,8 +120,6 @@ class tweak:
             "",
             regex=True
         )
-        print("---------\ncalle")
-        print(data)
         self.data["calle"] = data
 
     def _get_num(self):
@@ -202,3 +200,9 @@ class tweak:
             regex=True
         )
         self.data["colonia"] = data
+
+    def get_data(self) -> DataFrame:
+        """
+        Documentation
+        """
+        return self.data.copy()
